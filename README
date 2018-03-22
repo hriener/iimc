@@ -105,7 +105,7 @@ Installation of IImc now takes the following steps:
 
 1. Configure IImc using 
 
-  ./configure CC=clang CXX=clang++ CXXFLAGS="-stdlib=libc++ -g -O3" CPPFLAGS=-Dthread_local="__thread" YACC="/usr/local/bin/bison -y"
+  ./configure CC=clang CXX=clang++ CXXFLAGS="-stdlib=libc++ -g -O3" YACC="/usr/local/opt/bison/bin/bison -y"
 
 2. make
 
