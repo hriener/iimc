@@ -30,6 +30,7 @@
 ******************************************************************************/
 
 #include "util.h"
+#include <stddef.h>
 
 #ifndef lint
 static char rcsid[] UNUSED = "$Id: qsort.c,v 1.5 2002/08/25 05:30:13 fabio Exp $";
