@@ -46,7 +46,7 @@ add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/properties/PropCtlParser.cc
   VERBATIM)
 
 # /bin/sh ./build-aux/ylwrap src/properties/PropCtlScanner.ll lex.yy.c src/properties/PropCtlScanner.cc -- flex -olex.yy.c -olex.yy.c 
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/properties/PropCtlScanner.ll
+add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/properties/PropCtlScanner.cc
   COMMAND /bin/sh ./build-aux/ylwrap src/properties/PropCtlScanner.ll lex.yy.c src/properties/PropCtlScanner.cc -- flex -olex.yy.c -olex.yy.c
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   VERBATIM)
@@ -58,7 +58,7 @@ add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/automata/AutoParser.cc
   VERBATIM)
 
 # /bin/sh ./build-aux/ylwrap src/automata/AutoScanner.ll lex.yy.c src/automata/AutoScanner.cc -- flex -olex.yy.c -olex.yy.c 
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/automata/AutoScanner.ll
+add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/automata/AutoScanner.cc
   COMMAND /bin/sh ./build-aux/ylwrap src/automata/AutoScanner.ll lex.yy.c src/automata/AutoScanner.cc -- flex -olex.yy.c -olex.yy.c
   WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
   VERBATIM)
