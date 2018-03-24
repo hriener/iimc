@@ -1,1 +1,5 @@
 build/
+*.o
+*.a
+*.Po
+*.deps
