@@ -15,7 +15,7 @@ set(MINISAT_SOURCES
   minisat/mcore/Solver.cc
   minisat/utils/System.cc
   minisat/simp/SimpSolver.cc
-  ${CMAKE_SOURCE_DIR}/src/util/Random.cpp)
+  ${CMAKE_CURRENT_SOURCE_DIR}/../util/Random.cpp)
 
 set(MINISAT_INCLUDE_PATHS
   ${CMAKE_CURRENT_SOURCE_DIR}

@@ -19,48 +19,48 @@ add_subdirectory(src/sat)
 add_subdirectory(src/cudd)
 
 set(IIMC_INCLUDE_DIRS
-  ${CMAKE_SOURCE_DIR}
-  ${CMAKE_SOURCE_DIR}/src/util
-  ${CMAKE_SOURCE_DIR}/src/expressions
-  ${CMAKE_SOURCE_DIR}/src/sim
-  ${CMAKE_SOURCE_DIR}/src/parser
-  ${CMAKE_SOURCE_DIR}/src/model
-  ${CMAKE_SOURCE_DIR}/src/sat
-  ${CMAKE_SOURCE_DIR}/src/opt
-  ${CMAKE_SOURCE_DIR}/src/copt
-  ${CMAKE_SOURCE_DIR}/src/sopt
-  ${CMAKE_SOURCE_DIR}/src/truthtable
-  ${CMAKE_SOURCE_DIR}/src/cnf
-  ${CMAKE_SOURCE_DIR}/src/properties
-  ${CMAKE_SOURCE_DIR}/src/automata
-  ${CMAKE_SOURCE_DIR}/src/mc
-  ${CMAKE_SOURCE_DIR}/src/main
-  ${CMAKE_SOURCE_DIR}/src/cudd)
+  ${CMAKE_CURRENT_SOURCE_DIR}
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/util
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/expressions
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/sim
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/parser
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/model
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/sat
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/opt
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/copt
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/sopt
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/truthtable
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/cnf
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/properties
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/automata
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/mc
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/main
+  ${CMAKE_CURRENT_SOURCE_DIR}/src/cudd)
 
 include_directories(${IIMC_INCLUDE_DIRS})
 
 # /usr/local/opt/bison/bin/bison -y -o src/properties/PropCtlParser.cc ./src/properties/PropCtlParser.yy
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/properties/PropCtlParser.cc
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/src/properties/PropCtlParser.cc
   COMMAND ${BISON} -y -o src/properties/PropCtlParser.cc ./src/properties/PropCtlParser.yy
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
   VERBATIM)
 
 # /bin/sh ./build-aux/ylwrap src/properties/PropCtlScanner.ll lex.yy.c src/properties/PropCtlScanner.cc -- flex -olex.yy.c -olex.yy.c 
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/properties/PropCtlScanner.cc
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/src/properties/PropCtlScanner.cc
   COMMAND /bin/sh ./build-aux/ylwrap src/properties/PropCtlScanner.ll lex.yy.c src/properties/PropCtlScanner.cc -- flex -olex.yy.c -olex.yy.c
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
   VERBATIM)
 
 # /usr/local/opt/bison/bin/bison -y --name-prefix=autoparser -o src/automata/AutoParser.cc ./src/automata/AutoParser.yy
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/automata/AutoParser.cc
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/src/automata/AutoParser.cc
   COMMAND ${BISON} -y --name-prefix=autoparser -o src/automata/AutoParser.cc ./src/automata/AutoParser.yy
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
   VERBATIM)
 
 # /bin/sh ./build-aux/ylwrap src/automata/AutoScanner.ll lex.yy.c src/automata/AutoScanner.cc -- flex -olex.yy.c -olex.yy.c 
-add_custom_command(OUTPUT ${CMAKE_SOURCE_DIR}/src/automata/AutoScanner.cc
+add_custom_command(OUTPUT ${CMAKE_CURRENT_SOURCE_DIR}/src/automata/AutoScanner.cc
   COMMAND /bin/sh ./build-aux/ylwrap src/automata/AutoScanner.ll lex.yy.c src/automata/AutoScanner.cc -- flex -olex.yy.c -olex.yy.c
-  WORKING_DIRECTORY ${CMAKE_SOURCE_DIR}
+  WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
   VERBATIM)
 
 add_definitions(-DHAVE_CONFIG_H)
