@@ -3,3 +3,16 @@ build/
 *.a
 *.Po
 *.deps
+
+src/automata/AutoParser.cc
+src/automata/AutoParser.hh
+src/automata/AutoScanner.cc
+src/automata/location.hh
+src/automata/position.hh
+src/automata/stack.hh
+src/properties/PropCtlParser.cc
+src/properties/PropCtlParser.hh
+src/properties/PropCtlScanner.cc
+src/properties/location.hh
+src/properties/position.hh
+src/properties/stack.hh
